@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: aliceblue;
+}
+
+.sidebar-toggle {
+    position: fixed;
+    top: 2rem;
+    right: 3rem;
+    border: transparent;
+    background-color: transparent;
+    color: rgb(140, 204, 231);
+    font-size: 2rem;
+    cursor: pointer;
+    animation: jump 2s ease-in-out infinite;
+    transition: all 0.5s ease 0s;
+}
+
+.sidebar-toggle:hover {
+    opacity: 0.6;
+}
+
+@keyframes jump {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.sidebar {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: grid;
+    background-color: #fff;
+    grid-template-rows: auto 1fr auto;
+    row-gap: 1rem;
+    box-shadow: 0px 0px 15px #929191;
+    transform: translate(-100%);
+    transition: all 0.5s ease-in-out;
+}
+.show-sidebar {
+  transform: translate(0);
+}
+
+@media screen and (min-width: 620px) {
+    .sidebar {
+        width: 400px;
+    }
+}
+
+img {
+    height: 3rem;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    height: fit-content;
+}
+
+.close-btn {
+    padding: 0.3rem 0;
+    font-size: 2rem;
+    height: fit-content;
+    color: crimson;
+    background-color: transparent;
+    border-color: transparent;
+    transition: all 0.5s ease 0s;
+}
+
+.close-btn:hover{
+    transform: rotate(360deg);
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.links a {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: rgb(84, 84, 84);
+    letter-spacing: 0.1rem;
+    transition: all 0.5s  ease 0s;
+    display: block;
+    padding: 1.1rem 1rem;
+    font-size: 1.5rem;
+}
+
+.links a:hover {
+    color: rgb(97, 164, 206);
+    padding: 1.1rem 1.5rem;
+    list-style: none;
+    background-color: rgb(177, 213, 252);
+    color: rgb(97, 164, 206);
+}
+
+.social-icons {
+    display: flex;
+    align-self: end;
+    list-style: none;
+    justify-self: center;
+    padding: 1rem;
+}
+
+.social-icons li {
+    padding: 0 0.5rem;
+}
+
+.fa {
+    font-size: 1.5rem;
+    color: rgb(97, 164, 206);
+}
+
+.fa:hover {
+    opacity: 0.6;
+}
